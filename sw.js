@@ -1,0 +1,1 @@
+const C='mp1',A=['./','./index.html','./style.css','./data.js','./app.js','./manifest.webmanifest','./icon.svg'];self.oninstall=e=>e.waitUntil(caches.open(C).then(c=>c.addAll(A)));self.onfetch=e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)));
